@@ -1,6 +1,6 @@
 .app_footer {
     font-family: system-ui;
     text-align: right;
-    margin-right: 36px;
-    margin-top: 16px;
+    padding: 24px;
+    background-color: hsl(0, 0%, 75%);
 }

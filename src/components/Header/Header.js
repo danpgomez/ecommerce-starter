@@ -3,7 +3,7 @@ import "./Header.css";
 function Header() {
   return (
     <header className="app_header">
-      <h1>E-commerce Starter</h1>
+      <h1 className="site_title">Daniel's Wine Shop</h1>
     </header>
   );
 }

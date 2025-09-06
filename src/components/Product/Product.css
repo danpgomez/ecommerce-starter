@@ -1,0 +1,29 @@
+.product_card {
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    padding: 20px;
+    overflow-x: clip;
+    box-shadow: hsl(0 0% 40%) 4px 4px 8px;
+}
+
+.product_image_wrapper {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    overflow: clip;
+}
+
+.product_title {
+    margin: 8px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.product_winery {
+    font-style: italic;
+}

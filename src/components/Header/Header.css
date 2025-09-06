@@ -1,4 +1,8 @@
 .app_header {
-    margin-left: 34px;
-    font-family: system-ui;
+    background-color: hsl(345, 45%, 35%);
+    padding: 40px;
+}
+
+.site_title {
+    color: white;
 }

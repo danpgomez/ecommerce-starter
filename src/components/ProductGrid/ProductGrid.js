@@ -1,14 +1,28 @@
+import React from "react";
 import Product from "../Product";
 import "./ProductGrid.css";
 
 function ProductGrid() {
-  const numOfImages = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9);
-  console.log(numOfImages);
+
+  const [ products, setProducts ] = React.useState([]);
+  const getData = async () => {
+    try {
+        const response = await fetch("https://api.sampleapis.com/wines/reds");
+        const json = await response.json();
+        setProducts(json);
+    } catch (error) {
+        setProducts(error.message);
+    }
+  };
+
+  React.useEffect(() => {
+      getData();
+  }, []);
 
   return (
     <div className="product_grid">
-      {numOfImages.map((_, index) => (
-        <Product key={index} url="https://placehold.co/200" />
+      {products.map(product => (
+        <Product key={product.id} product={product} />
       ))}
     </div>
   );
