@@ -2,6 +2,8 @@
 
 A single-page commerce site built with React, [ParcelJS](https://parceljs.org/), and aiming to follow accessibility best practices with using semantic HTML (proper heading structure and landmark regions)
 
+[Live Demo](https://danielswineshop.netlify.app)
+
 ---
 
 ## 📸 Screenshots
