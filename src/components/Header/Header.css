@@ -1,8 +1,16 @@
 .app_header {
     background-color: hsl(345, 45%, 35%);
     padding: 40px;
+    display: flex;
 }
 
 .site_title {
     color: white;
+    flex: 1;
+}
+
+.shopping-cart {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
 }
