@@ -10,6 +10,8 @@ body {
 main {
     padding: 40px;
     background-color: antiquewhite;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .page_title {

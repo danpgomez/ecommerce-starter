@@ -1,0 +1,26 @@
+.cart-sidebar {
+    position: absolute;
+    background-color: white;
+    width: 0px;
+    top: 0;
+    right: -400px;
+    bottom: 0;
+    padding: 20px;
+    box-shadow: hsl(0 0% 0% / 0.5) -4px -4px 8px;
+    transition: right 0.3s;
+}
+
+.cart-sidebar.open {
+    width: 30%;
+    right: 0px;
+}
+
+.close-cart {
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+}
+
+.cart-heading {
+    margin-top: 20px;
+}
