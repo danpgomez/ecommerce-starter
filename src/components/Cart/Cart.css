@@ -1,0 +1,47 @@
+.cart-sidebar {
+    position: absolute;
+    background-color: white;
+    width: 0px;
+    top: 0;
+    right: -400px;
+    bottom: 0;
+    padding: 20px;
+    box-shadow: hsl(0 0% 0% / 0.5) -4px -4px 8px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.cart-sidebar.open {
+    opacity: 1;
+    width: 30%;
+    right: 0px;
+}
+
+.close-cart {
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+}
+
+.cart-heading {
+    margin-top: 20px;
+}
+
+@media (max-width: 425px) {
+    .cart-sidebar {
+        opacity: 0;
+        top: 100%;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        left: 0;
+        bottom: 0px;
+    }
+
+    .cart-sidebar.open {
+        opacity: 1;
+        top: 10%;
+        height: 100%;
+        width: 100%;
+    }
+}
