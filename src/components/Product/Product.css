@@ -1,6 +1,7 @@
 .product_card {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
+    border-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -9,6 +10,16 @@
     padding: 20px;
     overflow-x: clip;
     box-shadow: hsl(0 0% 0 / 0.5) 4px 4px 8px;
+    cursor: pointer;
+}
+
+.product_card:hover {
+    border-color: hsl(0 50% 30);
+    border-width: 2px;
+}
+
+.product_card.selected {
+    background-color: hsl(56, 48%, 75%);
 }
 
 .product_image_wrapper {
@@ -26,4 +37,10 @@
 
 .product_winery {
     font-style: italic;
+}
+
+@media (max-width: 514px) {
+    .product_card {
+        width: 100%;
+    }
 }

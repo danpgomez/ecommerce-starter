@@ -9,15 +9,24 @@ import { useState } from "react";
 export function App() {
 
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [selectedProducts, setSelectedProducts] = useState([]);
 
   return (
     <>
-      <Header isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen}/>
+      <Header isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
       <main>
-        <Cart isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen}/>
-        <section>
+        <Cart
+          isCartOpen={isCartOpen}
+          setIsCartOpen={setIsCartOpen}
+          selectedProducts={selectedProducts}
+          setSelectedProducts={setSelectedProducts}
+        />
+        <section className="wines-list-area">
           <h2 className="page_title">Our Wines</h2>
-          <ProductGrid />
+          <ProductGrid
+            selectedProducts={selectedProducts}
+            setSelectedProducts={setSelectedProducts}
+          />
         </section>
       </main>
       <Footer />

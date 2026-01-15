@@ -1,0 +1,20 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.cart-item-name {
+   flex: 2;
+}
+
+.cart-item-image {
+    max-width: 10%;
+    flex: 1;
+}
+
+.cart-item-price {
+    font-weight: 800;
+    flex: 1;
+}

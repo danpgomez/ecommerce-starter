@@ -1,5 +1,5 @@
 .cart-sidebar {
-    position: absolute;
+    position: fixed;
     background-color: white;
     width: 0px;
     top: 0;
@@ -9,6 +9,8 @@
     box-shadow: hsl(0 0% 0% / 0.5) -4px -4px 8px;
     opacity: 0;
     transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .cart-sidebar.open {
@@ -24,7 +26,20 @@
 }
 
 .cart-heading {
-    margin-top: 20px;
+    margin: 20px 0;
+}
+
+.cart-items-list {
+    height: 60%;
+    overflow-y: scroll;
+    flex: 2;
+}
+
+.cart-total {
+    padding: 20px;
+    color: white;
+    font-weight: 800;
+    background-color: black;
 }
 
 @media (max-width: 425px) {

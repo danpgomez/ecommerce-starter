@@ -18,3 +18,7 @@ main {
     margin-bottom: 24px;
     text-align: center;
 }
+
+.wines-list-area {
+    width: 100%;
+}
