@@ -23,6 +23,7 @@
     background-color: transparent;
     width: 48px;
     height: 48px;
+    font-size: 1rem;
 }
 
 .cart-heading {
@@ -30,16 +31,20 @@
 }
 
 .cart-items-list {
-    height: 60%;
+    height: 50%;
+    width: 100%;
     overflow-y: scroll;
-    flex: 2;
+    padding: 8px;
+    border-top: 1px solid lightgray;
 }
 
 .cart-total {
-    padding: 20px;
-    color: white;
+    padding: 20px 0;
+    width: 100%;
+    color: black;
     font-weight: 800;
-    background-color: black;
+    background-color: white;
+    border-top: 1px solid lightgray;
 }
 
 @media (max-width: 425px) {

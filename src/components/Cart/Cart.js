@@ -18,9 +18,9 @@ function Cart({
             className="close-cart"
             onClick={() => setIsCartOpen(!isCartOpen)}
         >X</button>
-        <h2 className="cart-heading">Shopping Cart</h2>
+        <h2 className="cart-heading">Order Summary</h2>
         <ul className="cart-items-list">
-            {selectedProducts.map((product, index) => <CartItem key={product.id-index} product={product} />)}
+            {selectedProducts.map((product, index) => <CartItem key={`${product.id}-${index}`} product={product} />)}
         </ul>
         <p className="cart-total">Total: ${totalPrice}</p>
     </aside>

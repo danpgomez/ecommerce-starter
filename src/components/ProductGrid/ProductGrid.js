@@ -10,7 +10,14 @@ function ProductGrid({ selectedProducts, setSelectedProducts }) {
     try {
       const response = await fetch("https://api.sampleapis.com/wines/reds");
       const json = await response.json();
-      setProducts(json);
+      
+      // This wine API doesn't include prices so I'm adding a random price for each wine.
+      const productsWithPrice = [...json].map(product => {
+        product.price = generateRandomPrice()
+        return product;
+      });
+
+      setProducts(productsWithPrice);
     } catch (error) {
       setProducts(error.message);
     }
@@ -23,9 +30,6 @@ function ProductGrid({ selectedProducts, setSelectedProducts }) {
   return (
     <div className="product_grid">
       {products.map(product => {
-        // This wine API doesn't include prices so I'm adding a random price for each wine.
-        product.price = generateRandomPrice();
-        
         return <Product
           key={product.id}
           product={product}
