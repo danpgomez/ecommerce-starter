@@ -63,5 +63,6 @@
         top: 10%;
         height: 100%;
         width: fit-content;
+        min-width: 100%;
     }
 }
