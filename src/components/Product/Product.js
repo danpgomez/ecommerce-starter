@@ -11,9 +11,18 @@ function Product({ product, selectedProducts, setSelectedProducts }) {
     className={productClass}
     onClick={() => {
       setIsSelectedProduct(true);
-      const updatedProducts = [...selectedProducts];
-      updatedProducts.push(product);
-      setSelectedProducts(updatedProducts);
+      const existingIndex = selectedProducts.findIndex(p => p.id === product.id);
+      
+      if (existingIndex !== -1) {
+        // Product exists in selectedProducts
+        const updatedProducts = selectedProducts.map((p, index) => {
+          return index === existingIndex ? {...p, quantity: p.quantity + 1} : p;
+        });
+        setSelectedProducts(updatedProducts);
+      } else {
+        // Add product to selectedProduct because it's not already there.
+        setSelectedProducts([...selectedProducts, { ...product, quantity: 1 }]);
+      }
     }}
     >
     <article>

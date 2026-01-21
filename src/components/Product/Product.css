@@ -12,6 +12,7 @@
     box-shadow: hsl(0 0% 0 / 0.5) 4px 4px 8px;
     cursor: pointer;
     font-size: inherit;
+    color: black;
 }
 
 .product_card:hover {
