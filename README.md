@@ -8,7 +8,12 @@ A single-page commerce site built with React, [ParcelJS](https://parceljs.org/),
 
 ## 📸 Screenshots
 
-![Screenshot of E-Commerce Starter app: Daniel's Wine Shop](app-screenshot-1.png)
+<div style="display: flex; flex-wrap: wrap; justify-content: center">
+  <img src="./screenshots/screenshot-1.png" style="max-width: 500px; height: auto; margin: 5px;">
+  <img src="./screenshots/screenshot-2.png" style="max-width: 500px; height: auto; margin: 5px;">
+  <img src="./screenshots/screenshot-3.png" style="max-width: 500px; height: auto; margin: 5px;">
+  <img src="./screenshots/screenshot-4.png" style="max-width: 500px; height: auto; margin: 5px;">
+</div>
 
 ## 🧰 Built With
 
