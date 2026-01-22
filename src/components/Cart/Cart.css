@@ -62,7 +62,7 @@
         opacity: 1;
         top: 10%;
         height: 100%;
-        width: fit-content;
-        min-width: 100%;
+        width: calc(fit-content - 32px);
+        min-width: calc(100% - 32px);
     }
 }
