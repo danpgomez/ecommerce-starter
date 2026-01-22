@@ -1,12 +1,15 @@
 .cart-item {
     display: flex;
     align-items: center;
-    margin: 20px 0px;
+    margin: var(--spacing-lg) 0px;
     gap: 10px;
+    font-family: var(--text-paragraph);
 }
 
 .cart-item-name {
    flex: 2;
+   font-size: var(--text-sm);
+   color: var(--color-text);
 }
 
 .cart-item-image {

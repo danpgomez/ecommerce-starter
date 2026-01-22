@@ -1,16 +1,35 @@
 .app_header {
-    background-color: hsl(345, 45%, 35%);
-    padding: 40px;
+    background-color: var(--color-primary);
+    padding: var(--spacing-xxl);
     display: flex;
 }
 
 .site_title {
-    color: white;
+    color: var(--color-background);
     flex: 1;
+    font-family: var(--text-branding);
 }
 
 .shopping-cart {
     width: 48px;
     height: 48px;
     cursor: pointer;
+}
+
+@media (max-width: 514px) {
+    .app_header {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+
+    .site_title {
+        font-size: var(--text-xxxl);
+        flex: 2;
+    }
+
+    .shopping-cart {
+        width: 40px;
+        height: 40px;
+    }
 }

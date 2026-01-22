@@ -1,11 +1,11 @@
 .cart-sidebar {
     position: fixed;
-    background-color: white;
+    background-color: var(--color-surface);
     width: 0px;
     top: 0;
     right: -400px;
     bottom: 0;
-    padding: 16px;
+    padding: var(--spacing-md);
     box-shadow: hsl(0 0% 0% / 0.5) -4px -4px 8px;
     opacity: 0;
     transition: all 0.3s;
@@ -24,29 +24,30 @@
     width: 48px;
     height: 48px;
     font-size: 1rem;
-    border: 1px solid black;
-    color: black;
+    border: 1.5px solid var(--color-primary);
+    border-radius: var(--border-radius-sm);
+    color: var(--color-text);
 }
 
 .cart-heading {
-    margin: 20px 0;
+    margin: var(--spacing-lg) 0;
+    font-family: var(--text-heading);
 }
 
 .cart-items-list {
     height: 50%;
     width: 100%;
     overflow-y: scroll;
-    padding: 8px 0;
-    border-top: 1px solid lightgray;
+    padding: var(--spacing-sm) 0;
+    border-top: 1px solid var(--color-stroke);
 }
 
 .cart-total {
-    padding: 20px 0;
+    padding: var(--spacing-sm) 0;
     width: 100%;
-    color: black;
+    color: var(--color-heading);
     font-weight: 800;
-    background-color: white;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid var(--color-stroke);
 }
 
 @media (max-width: 425px) {
