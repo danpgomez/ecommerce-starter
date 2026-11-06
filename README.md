@@ -1,6 +1,6 @@
 # E-Commerce Starter
 
-A single-page commerce site built with React, [ParcelJS](https://parceljs.org/), and aiming to follow accessibility best practices using semantic HTML (proper heading structure and landmark regions)
+A single-page commerce site built with React, TypeScript, [ParcelJS](https://parceljs.org/), and aiming to follow accessibility best practices using semantic HTML (proper heading structure and landmark regions)
 
 [Live Demo](https://danielswineshop.netlify.app)
 
@@ -18,6 +18,7 @@ A single-page commerce site built with React, [ParcelJS](https://parceljs.org/),
 ## 🧰 Built With
 
 - React ([ParcelJS](https://parceljs.org/))
+- TypeScript
 - Wines API from [sampleapis.com](sampleapis.com)
 - Semantic HTML
 - CSS Flexbox
