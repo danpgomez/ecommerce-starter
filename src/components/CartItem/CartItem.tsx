@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { JSX } from "react";
 import "./CartItem.css";
+import type { CartProduct } from "../../types/products";
 
-function CartItem({ product, selectedProducts, setSelectedProducts }) {
+interface CartItemProps {
+    product: CartProduct;
+    selectedProducts: CartProduct[];
+    setSelectedProducts: (products: CartProduct[]) => void;
+}
+
+function CartItem({ product, selectedProducts, setSelectedProducts }: CartItemProps): JSX.Element {
     const handleDecrement = () => {
         if (product.quantity === 1) {
             setSelectedProducts(selectedProducts.filter(p => p.id !== product.id));

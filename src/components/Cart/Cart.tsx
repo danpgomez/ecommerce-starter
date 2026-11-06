@@ -1,14 +1,23 @@
 import "./Cart.css";
 import CartItem from "../CartItem";
+import { JSX } from "react";
+import type { CartProduct } from "../../types/products";
+
+interface CartProps {
+    isCartOpen: boolean;
+    setIsCartOpen: (currentCartStatus: boolean) => void;
+    selectedProducts: CartProduct[]
+    setSelectedProducts: (products: CartProduct[]) => void;
+};
 
 function Cart({
     isCartOpen,
     setIsCartOpen,
     selectedProducts,
     setSelectedProducts
-}) {
+}: CartProps): JSX.Element {
     const totalPrice = selectedProducts.reduce((accumulator, product) => {
-        return parseFloat(accumulator) + (parseFloat(product.price) * product.quantity);
+        return accumulator + (product.price * product.quantity);
     }, 0);
     const cartClass = isCartOpen ? "cart-sidebar open" : "cart-sidebar";
 
@@ -28,7 +37,7 @@ function Cart({
                 />
             })}
         </ul>
-        <p className="cart-total">Total: ${totalPrice}</p>
+        <p className="cart-total">Total: ${totalPrice.toFixed(2)}</p>
     </aside>
 }
 

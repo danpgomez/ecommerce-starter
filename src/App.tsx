@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useState, JSX } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import ProductGrid from "./components/ProductGrid";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
-import { useState } from "react";
+import type { CartProduct } from "./types/products";
 
-export function App() {
+
+export function App(): JSX.Element {
 
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [selectedProducts, setSelectedProducts] = useState([]);
+  const [selectedProducts, setSelectedProducts] = useState<CartProduct[]>([]);
 
   return (
     <>

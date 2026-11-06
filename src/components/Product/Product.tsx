@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useState, JSX } from "react";
 import "./Product.css";
 import Rating from "../Rating";
+import type { WineProduct, CartProduct } from "../../types/products";
 
-function Product({ product, selectedProducts, setSelectedProducts }) {
+interface ProductProps {
+  product: WineProduct;
+  selectedProducts: CartProduct[];
+  setSelectedProducts: (selectedProducts: CartProduct[]) => void;
+}
+
+function Product({ product, selectedProducts, setSelectedProducts }: ProductProps): JSX.Element {
   const [isSelectedProduct, setIsSelectedProduct] = useState(false);
   const productClass = isSelectedProduct ? "product_card selected" : "product_card";
   

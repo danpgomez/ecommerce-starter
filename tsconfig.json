@@ -22,6 +22,9 @@
 
     /* Type Checking */
     "strict": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
 
     /* Completeness */
     "skipLibCheck": true

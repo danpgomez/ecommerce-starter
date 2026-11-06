@@ -1,6 +1,7 @@
 import "./Footer.css";
+import { JSX } from 'react';
 
-function Footer() {
+function Footer(): JSX.Element {
   return <footer className="app_footer">© Daniel's Wine Shop 2025</footer>;
 }
 
