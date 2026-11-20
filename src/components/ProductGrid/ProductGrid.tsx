@@ -1,6 +1,7 @@
 import React, { JSX } from "react";
 import ProductCard from "../Product";
 import "./ProductGrid.css";
+import fallbackWines from "../wines.json";
 import type { WineProduct, CartProduct } from "../../types/products";
 
 interface ProductGridProps {
@@ -33,6 +34,17 @@ function ProductGrid({ selectedProducts, setSelectedProducts }: ProductGridProps
       } else {
         console.error(error);
       }
+
+      const fallbackProductsWithPrice: WineProduct[] = fallbackWines.reds.map(fallbackProduct => ({
+        ...fallbackProduct,
+        rating: {
+          ...fallbackProduct.rating,
+          average: Number(fallbackProduct.rating.average),
+        },
+        price: generateRandomPrice(),
+      }));
+      
+      setProducts(fallbackProductsWithPrice);
     }
   };
 
